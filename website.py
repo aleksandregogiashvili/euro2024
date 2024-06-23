@@ -52,21 +52,6 @@ teams = [
 ]
 
 
-# def get_matches():
-#     conn = sqlite3.connect('euros.db')
-#     c = conn.cursor()
-#     c.execute("SELECT * FROM matches")
-#     matches = c.fetchall()
-#     conn.close()
-#     return matches
-# def get_matches():
-#     conn = sqlite3.connect('euros.db')
-#     c = conn.cursor()
-#     c.execute('SELECT date, match, result FROM matches')
-#     matches = c.fetchall()
-#     conn.close()
-#     return matches
-
 
 users = {
     'user1': {'password': 'password1', 'email': 'user1@example.com'},
@@ -166,11 +151,6 @@ def get_matches():
 
 
 
-# @app.route('/match-results')
-# def match_results():
-#     matches = get_matches()
-#     return render_template('matches.html', matches=matches)
-
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
@@ -181,7 +161,6 @@ if __name__ == '__main__':
         with app.app_context():
             db.create_all()
 
-    # with app.app_context():
-    #     db.create_all()
+  
     app.run(debug=True)
 

@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 845px;
+
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+
+        }
+
+        .navbar-nav {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin-left: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #f39c12;
+        }
+
+        .container {
+    padding: 2rem;
+}
+
+        img {
+    display: block;
+    margin: 0 auto;
+}
+
+     h1 {
+     text-align: center;
+     }
+
+     .buttons {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     }
+
+     a {
+     color: white;
+     font-size: 18px;
+     text-decoration: none;
+     }
+     .button1 {
+     background-color: #405cf5;
+     border-radius: 6px;
+     border-width: 0;
+     box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+     box-sizing: border-box;
+     color: #fff;
+     cursor: pointer;
+     margin-left: 10px
+
+     }
+
+     .button2 {
+     background-color: #405cf5;
+     border-radius: 6px;
+     border-width: 0;
+     box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+     box-sizing: border-box;
+     color: #fff;
+     cursor: pointer;
+     margin-left: 10px
+     }
+
+     p {
+     font-size: 18px !important;
+     color: white;
+     font-weight: bold;
+     line-height: 1.6;
+     text-align: center;
+     padding: 0 20px;
+     }
+
+     .text {
+     background-color: grey;
+     }
+    </style>
+</head>
+<body>
+
+<h1>Welcome to Euro League 2024</h1>
+<div class="text"><p>The Euro League 2024 is the most exciting football event of the year, bringing together the best teams from across Europe to compete for the coveted championship title. Stay tuned for thrilling matches, amazing goals, and unforgettable moments.</p>
+<p>The tournament kicks off on June 15, 2024, with teams battling it out in various venues across the continent. Don't miss out on any action, and follow your favorite teams and players as they make history.</p></div>
+
+<img src="{{ url_for('static', filename='euro.jpg') }}" alt="Euro 2024" style="width:100%;max-width:600px;">
+
+
+
+<div class="buttons">
+<button class="button1" style='margin-right:50px;margin-top:50px'><a href="/register">Sign Up</a></button>
+<button class="button2" style='margin-top:50px'><a href="/match-results">Match Results</a></button>
+</div>
+
+</body>
+</html>
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+    <a href="/match-results">Match Results</a>
+    <a href="/teams">Teams</a>
+{% endblock %}
+
+
+
